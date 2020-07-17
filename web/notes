@@ -1,0 +1,26 @@
+css- Cascading stylesheet
+used for style and color
+
+syntax
+selector{
+    property:value;
+}
+selector --> html tag or id(#) or class(.) 
+#heading 
+.uname
+h1{
+    color:red;
+    }
+    #heading {
+        color:red;
+    }
+    .uname{
+        color:green;
+    }
+    3ways css:
+    1.Internal css
+    2.External css-we can use <link> for this
+    3.Inline css- we use html tags like
+        <html tag>style</html>
+        <h1 style="color: lime;"></h1>
+    

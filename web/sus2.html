@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <!--how to write internal javascript-->
+     <!---javascript is dyanamic-->
+     <script>
+         function register(){
+             console.log("register")
+
+            console.log (document.reg.gender[0].checked)
+            if(document.reg.gender[0].checked==false && document.reg.gender[1].checked==false)
+            {
+                var err=document.getElementById("genderMessage");
+                err.innerHTML="please select gender";
+                err.style.color="red";
+                return false;
+            }
+            if(document.reg.city.value=="-1")
+            {
+                var err=document.getElementById("cityMessage");
+                err.innerHTML="please select city";
+                err.style.color="red";
+            }
+         }
+     </script>
+    </head>
+    <body>
+        <form name="reg">
+
+            <div class="form-group">
+            <lable for="email">Email address:</lable>
+            <input type="email"class="form-control"id="email"name="email">
+            <span id="emailMessage"></span>
+            </div><br>
+            <div class="form-group">
+            <lable for="password">Possword address:</lable>
+            <input type="password"class="form-control"id="password"name="password">
+            <span id="passwordMessage"></span>
+            </div>
+            <label> Gender</label>
+            <div>
+                <input type="checkbox"name="gender">Male
+                <input type="checkbox"name="gender">FeMale
+            </div>
+            <span id="genderMessage"></span><br>
+
+            <!--<div class="form-group"
+            <lable>Gender </lable>
+            <input type="radio">Male
+            <input type="radio">FeMale
+            </div>--->
+           
+            Select city
+            <select name="city">
+                <option value="-1">Select country</option>
+                <option value="10">bangalore</option>
+                <option value="20">mumbai</option>
+                <option value="30">pune</option>
+            </select>
+            <span id="cityMessage"></span>
+            <br>
+            <button type="button" class="btn btn-success" onclick="register();">Submit</button><br>
+        </form>
+    </body>
+</html>

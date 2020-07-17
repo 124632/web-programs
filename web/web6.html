@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JAVA SCRIPT</title>
+    </head>
+    <script>
+       /* how to write internal javascript */
+        console.log("WELCOME TO JAVASCRIPT");
+        for(var a=0;a<5;a++)
+            {
+                console.log("WELCOME TO JAVASCRIPT");
+            }
+        function submit()
+        {
+           var email= document.getElementById("email").value;
+            console.log("email:"+email)
+            var password=document.getElementById("password").value;
+            console.log("password:"+password)
+            var err=document.getElementById("emailmsg");
+            if(email.length=="")
+           {
+                err.innerHTML="Please Enter email";
+               err.style.color="red";
+               return false;
+           }
+            var err=document.getElementById("passwordmsg");
+            if(password.length=="")
+               {
+                   err.innerHTML="Please Enter password";
+                   err.style.color="red";
+                   return false;
+               }
+            return true;
+            console.log("calling submit")
+        }
+    </script>
+    <body>
+        <form>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email"  placeholder="Enter Email">
+                <span id="emailmsg"></span>
+              </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password"  placeholder="Enter password">
+                <span id="passwordmsg"></span>
+              </div>
+        </form>
+            <button type="button" class="btn btn-success" onclick="submit();">Submit</button>
+    </body>
+</html>
